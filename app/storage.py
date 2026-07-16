@@ -16,3 +16,9 @@ def save_faq(question, answer):
     faqs[question.lower().strip()] = answer
     with open(DATA_FILE, "w") as f:
         json.dump(faqs, f, indent=2)
+
+
+def save_all(faqs):
+    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
+    with open(DATA_FILE, "w") as f:
+        json.dump(faqs, f, indent=2)
