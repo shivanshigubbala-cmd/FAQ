@@ -1,12 +1,13 @@
 {
-  "how do i reset my password": "Go to the login page and click 'Forgot Password' to receive a reset link by email.",
-  "what are your support hours": "Our support team is available Monday to Friday, 9 AM to 6 PM.",
-  "how do i contact support": "You can reach support via the Help Center chat or by emailing support@example.com.",
-  "how do i create an account": "Click 'Sign Up' on the homepage and fill in your details to create an account.",
-  "what payment methods do you accept": "We accept major credit cards, debit cards, and UPI payments.",
-  "how do i cancel my subscription": "Go to Account Settings > Subscription and click 'Cancel Subscription'.",
-  "is my data secure": "Yes, all data is encrypted in transit and at rest, and we never share it with third parties.",
-  "new q?": "New A.",
-  "what is opencode?": "An interactive CLI tool.",
-  "frontend test?": "It works!"
+  "what services do you provide?": "ADAPS offers a comprehensive suite of IT consulting, digital transformation, and custom software solutions tailored to business needs.",
+  "how do i start a new project?": "You can request a consultation through our contact form or reach out directly to our sales team to schedule a discovery call.",
+  "which industries do you work with?": "We serve a wide range of sectors, including healthcare, finance, logistics, and manufacturing, providing specialized digital strategies.",
+  "what is the typical project timeline?": "Timelines vary by scope, but we typically move from discovery to delivery in 3 to 6 months using an agile, iterative approach.",
+  "how does ongoing support work?": "Post-delivery, we offer tiered maintenance packages including security updates, technical support, and performance optimization.",
+  "how do you handle data security?": "We employ industry-standard encryption, strict access controls, and adhere to global confidentiality practices for all client data.",
+  "how is pricing determined?": "Pricing is based on project complexity, required resources, and delivery timelines, provided as a detailed quote after discovery.",
+  "how can i contact the sales team?": "Our sales team can be reached via the 'Contact Us' page on our website or through our official LinkedIn company profile.",
+  "do you work with startups or enterprises?": "We partner with both high-growth startups needing rapid scaling and established enterprises undergoing digital modernization.",
+  "what makes your approach different?": "Our edge lies in decades of deep industry experience combined with a customer-centric process that ensures technical solutions drive real business value.",
+  "hi": "Hello! How can I help you?\n"
 }
