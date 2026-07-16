@@ -60,12 +60,11 @@ export default function Home() {
             title={isSidebarCollapsed ? "Expand Sidebar" : "Collapse Sidebar"}
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`transition-all duration-300 ${isSidebarCollapsed ? 'scale-110' : ''} group-hover:text-blue-600`}>
-              <path d="M12 8v4m0 4v-4M8 12h8" /> 
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 16v.01" />
-              <path d="M12 8v.01" />
-              <path d="M16 12h.01" />
-              <path d="M8 12h.01" />
+              <path d="M12 2v4" />
+              <rect x="4" y="8" width="16" height="12" rx="2" />
+              <circle cx="9" cy="14" r="1" />
+              <circle cx="15" cy="14" r="1" />
+              <path d="M9 18h6" />
             </svg>
           </button>
 
