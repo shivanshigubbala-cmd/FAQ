@@ -90,21 +90,21 @@ export default function Home() {
       </aside>
 
       {/* MAIN CONTENT */}
-      <main className="flex-1 ml-0 pl-0 transition-all duration-300 pt-16 h-full" style={{ marginLeft: isSidebarCollapsed ? '64px' : '256px' }}>
-        <div className="h-full p-8 flex flex-col max-w-4xl mx-auto w-full">
-          <div className="flex-1 h-full relative">
+      <main className="flex-1 ml-0 pl-0 transition-all duration-300 pt-16 h-screen overflow-y-auto" style={{ marginLeft: isSidebarCollapsed ? '64px' : '256px' }}>
+        <div className="p-8 flex flex-col max-w-4xl mx-auto w-full min-h-[calc(100vh-4rem)]">
+          <div className="flex-1 relative">
             {activeTab === 'chat' && (
-              <div className="h-full flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-300">
+              <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-300">
                 <AskPanel />
               </div>
             )}
             {activeTab === 'teach' && (
-              <div className="h-full flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-300">
+              <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-300">
                 <TeachPanel onSuccess={triggerRefresh} />
               </div>
             )}
             {activeTab === 'knowledge' && (
-              <div className="h-full flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-300">
+              <div className="flex flex-col animate-in fade-in slide-in-from-bottom-4 duration-300">
                 <FaqList key={refreshCount} refresh={triggerRefresh} />
               </div>
             )}

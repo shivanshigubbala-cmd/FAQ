@@ -41,3 +41,13 @@ export async function teachFaq(question: string, answer: string, apiKey: string)
   if (!res.ok) throw new Error('Failed to teach new FAQ');
   return res.json();
 }
+
+export async function deleteFaq(question: string, apiKey: string): Promise<void> {
+  const res = await fetch(`${API_URL}/faqs/${encodeURIComponent(question)}`, {
+    method: 'DELETE',
+    headers: { 'x-api-key': apiKey },
+  });
+  if (res.status === 401) throw new Error('Invalid API key');
+  if (res.status === 404) throw new Error('Question not found');
+  if (!res.ok) throw new Error('Failed to delete FAQ');
+}
