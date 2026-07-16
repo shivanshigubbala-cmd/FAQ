@@ -32,9 +32,14 @@ export default function AskPanel() {
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-200 mb-8">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Ask a Question</h2>
-      <p className="text-xs text-gray-500 mb-4">Demonstrates: BR-01 (Plain Language), BR-02 (Fuzzy Match), BR-04 (Unknowns), BR-07 (Performance)</p>
+    <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-200 mb-8 hover:shadow-md transition-shadow">
+      <div className="flex items-center gap-2 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+        <h2 className="text-xl font-bold text-gray-800">Ask a Question</h2>
+      </div>
+      <p className="text-xs text-gray-500 mb-6">Ask in plain language — the assistant handles typos and rewordings, and tells you honestly when it doesn't know.</p>
       
       <form onSubmit={handleAsk} className="flex gap-2 mb-6">
         <input
@@ -42,30 +47,30 @@ export default function AskPanel() {
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           placeholder="e.g. How do I reset my password?"
-          className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
+          className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black"
         />
         <button
           type="submit"
           disabled={isLoading}
-          className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:bg-blue-300 transition-colors"
+          className="px-6 py-2 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 disabled:bg-blue-300 transition-colors"
         >
           {isLoading ? 'Asking...' : 'Ask'}
         </button>
       </form>
 
       {error && (
-        <div className="p-3 mb-4 text-sm text-red-600 bg-red-50 border border-red-200 rounded-md">
+        <div className="p-3 mb-4 text-sm text-red-600 bg-red-50 border border-red-200 rounded-lg">
           {error}
         </div>
       )}
 
       {result && (
-        <div className="p-4 rounded-md bg-gray-50 border border-gray-200">
+        <div className="p-4 rounded-lg bg-indigo-50/50 border border-indigo-100">
           {result.answer ? (
-            <div>
-              <p className="text-gray-800 text-lg">{result.answer}</p>
+            <div className="animate-in fade-in duration-300">
+              <p className="text-gray-800 text-lg leading-relaxed">{result.answer}</p>
               {result.matched && (
-                <p className="text-xs text-gray-400 mt-2 italic">matched: {result.matched}</p>
+                <p className="text-xs text-indigo-500 mt-2 font-medium uppercase tracking-wider">matched: {result.matched}</p>
               )}
             </div>
           ) : (
